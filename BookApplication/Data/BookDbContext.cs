@@ -10,6 +10,6 @@ namespace BookApplication.Data
         }
 
         // Add my properties
-        public DbSet<Book> MyProperty { get; set; }
+        public DbSet<Book> Books { get; set; }
     }
 }
