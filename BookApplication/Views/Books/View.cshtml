@@ -1,0 +1,42 @@
+﻿@model BookApplication.Models.UpdateBookViewModel
+
+<div class="container">
+	<div class="row">
+		<h1> Edit Book </h1>
+	</div>
+	<div class="row mt-5">
+		<form method="post" action="Update" >
+			<input type="text" class="form-control" id="id" asp-for="Id" readonly hidden>
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="mb-3">
+						<label for="Title" class="form-label">Book Title:</label>
+						<input type="text" class="form-control" id="title" asp-for="Title">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-2">
+					<div class="mb-3">
+						<label for="Year" class="form-label">Year:</label>
+						<input type="number" class="form-control" id="year" asp-for="YearPublished">
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="mb-3">
+						<label for="Author" class="form-label">Author:</label>
+						<input type="text" class="form-control" id="author" asp-for="Author">
+					</div>
+				</div>
+			</div>
+			<button type="submit" class="btn btn-primary float-left" asp-action="Update" asp-controller="Books">Update</button>
+		</form>
+
+		<form method="post" asp-action="Delete" asp-controller="Books" id="deleteForm" class="d-flex align-items-end">
+			@Html.AntiForgeryToken()
+			<input type="hidden" name="id" value="@Model.Id"/>
+			<button type="button" class="btn btn-danger ml-2 mt-2" onclick="confirmDelete('@Model.Id')">Delete</button>
+		</form>
+	</div>
+</div>
