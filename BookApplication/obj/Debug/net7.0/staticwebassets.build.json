@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "AoEnWpLi1I3lFdx/qyEJkIPCcSE0rGfy6c/dhEBXeBg=",
+  "Hash": "QDL7GZk7qUyXMEfpIAJWIVuiF4TdwRrmIgvFnvKdez8=",
   "Source": "BookApplication",
   "BasePath": "_content/BookApplication",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\marce\\Documents\\Projects\\book-system\\BookApplication\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\BookApplication.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\marce\\Documents\\Projects\\book-system\\BookApplication\\wwwroot\\css\\login.css",
+      "SourceId": "BookApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\marce\\Documents\\Projects\\book-system\\BookApplication\\wwwroot\\",
+      "BasePath": "_content/BookApplication",
+      "RelativePath": "css/login.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\login.css"
     },
     {
       "Identity": "C:\\Users\\marce\\Documents\\Projects\\book-system\\BookApplication\\wwwroot\\css\\site.css",

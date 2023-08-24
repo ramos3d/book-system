@@ -41,7 +41,7 @@ namespace BookApplication.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("MyProperty");
+                    b.ToTable("Books");
                 });
 #pragma warning restore 612, 618
         }

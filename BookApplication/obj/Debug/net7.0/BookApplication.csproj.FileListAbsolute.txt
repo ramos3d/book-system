@@ -73,3 +73,4 @@ C:\Users\marce\Documents\Projects\book-system\BookApplication\obj\Debug\net7.0\r
 C:\Users\marce\Documents\Projects\book-system\BookApplication\obj\Debug\net7.0\BookApplication.pdb
 C:\Users\marce\Documents\Projects\book-system\BookApplication\obj\Debug\net7.0\BookApplication.genruntimeconfig.cache
 C:\Users\marce\Documents\Projects\book-system\BookApplication\obj\Debug\net7.0\ref\BookApplication.dll
+C:\Users\marce\Documents\Projects\book-system\BookApplication\obj\Debug\net7.0\scopedcss\Views\Shared\_LayoutLogin.cshtml.rz.scp.css

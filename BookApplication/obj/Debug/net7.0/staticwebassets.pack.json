@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\BookApplication.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\marce\\Documents\\Projects\\book-system\\BookApplication\\wwwroot\\css\\login.css",
+      "PackagePath": "staticwebassets\\css\\login.css"
+    },
+    {
       "Id": "C:\\Users\\marce\\Documents\\Projects\\book-system\\BookApplication\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
