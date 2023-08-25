@@ -43,6 +43,27 @@ namespace BookApplication.Migrations
 
                     b.ToTable("Books");
                 });
+
+            modelBuilder.Entity("BookApplication.Models.Domain.Users", b =>
+                {
+                    b.Property<Guid>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("id");
+
+                    b.ToTable("users");
+                });
 #pragma warning restore 612, 618
         }
     }
