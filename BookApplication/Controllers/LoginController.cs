@@ -9,8 +9,8 @@ namespace BookApplication.Controllers
             return View();
         }
 
-        public string Register() {
-            return "Register page here";
+        public IActionResult Register() {
+            return View();
         }
     }
 }
