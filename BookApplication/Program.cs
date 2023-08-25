@@ -10,6 +10,8 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<BookDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("BookConnectionString")));
 
+// Register the PasswordService
+builder.Services.AddScoped<BookApplication.Services.PasswordService>();
 
 var app = builder.Build();
 

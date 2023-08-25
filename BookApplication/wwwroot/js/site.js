@@ -20,3 +20,16 @@ function confirmDelete(bookId) {
         }
     });
 }
+
+function validatePasswords() {
+    var password = document.getElementById('password').value;
+    var confirmPassword = document.getElementById('confirm-password').value;
+    var resultElement = document.getElementById('result');
+
+    if (password !== confirmPassword) {
+        resultElement.textContent = "Please make sure both passwords are the same.";
+        return false;
+    }
+    resultElement.textContent = ""; 
+    return true;
+}
