@@ -1,0 +1,48 @@
+﻿@model BookApplication.Models.AddUserViewModel
+@{
+	Layout = "_LayoutLogin";
+}
+<main class="form-signin">
+	<div class="text-center">
+		<span class="material-symbols-rounded">
+			assignment_ind
+		</span>
+		<form method="post" action="AddRegister" onsubmit="return validatePasswords()">
+			<h1 class="h3 mb-3 fw-normal">Register</h1>
+
+			<div class="form-floating mb-2">
+				<input type="text" class="form-control" id="name"  asp-for="name" required>
+				<label for="name">Name</label>
+			</div>
+			<div class="form-floating mb-2">
+				<input type="email" class="form-control" id="email"  asp-for="email" required>
+				<label for="email">Email address</label>
+			</div>
+			<div class="form-floating">
+				<input type="password" class="form-control" id="password"  asp-for="password" required>
+				<label for="password">Password</label>
+			</div>
+
+			<div class="form-floating">
+				<input type="password" class="form-control" id="confirm-password" name="confirm_password" required>
+				<label for="password">Confirm Password</label>
+				<div id="result" class="text-danger mb-1"></div>
+			</div>
+
+						
+			<button type="submit" class="btn btn-primary" asp-controller="Register" asp-action="AddRegister">Register</button>
+		</form>
+		@if (TempData["success"] != null)
+		{
+			<div class="alert alert-success mt-2 col-md-4">
+				@TempData["success"]
+			</div>
+		}
+		@if (TempData["error"] != null)
+		{
+			<div class="alert alert-danger mt-2  col-md-4">
+				@TempData["error"]
+			</div>
+		}
+	</div>
+</main>
