@@ -20,5 +20,11 @@ namespace BookApplication.Services
 
 			return builder.ToString();
 		}
+
+		public bool VerifyPassword(string enteredPassword, string hashedPassword)
+		{
+			string enteredPasswordHash = HashPassword(enteredPassword);
+			return StringComparer.OrdinalIgnoreCase.Compare(enteredPasswordHash, hashedPassword) == 0;
+		}
 	}
 }

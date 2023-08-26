@@ -13,6 +13,9 @@ builder.Services.AddDbContext<BookDbContext>(options =>
 // Register the PasswordService
 builder.Services.AddScoped<BookApplication.Services.PasswordService>();
 
+// Register Authentication
+builder.Services.AddAuthentication().AddCookie();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -33,5 +36,15 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+// For moving back to Login if it's not logged in
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllerRoute(
+        name: "default",
+        pattern: "{controller=Home}/{action=Index}/{id?}");
+
+    endpoints.MapFallbackToController("Index", "Login");
+});
 
 app.Run();

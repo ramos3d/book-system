@@ -1,4 +1,5 @@
 ﻿using BookApplication.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -12,7 +13,8 @@ namespace BookApplication.Controllers
         {
             _logger = logger;
         }
-
+        
+        [Authorize]
         public IActionResult Index()
         {
             return View();

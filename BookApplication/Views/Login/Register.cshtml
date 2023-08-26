@@ -1,6 +1,7 @@
 ﻿@model BookApplication.Models.AddUserViewModel
 @{
 	Layout = "_LayoutLogin";
+	ViewData["Title"] = "Register";
 }
 <main class="form-signin">
 	<div class="text-center">
@@ -28,9 +29,12 @@
 				<label for="password">Confirm Password</label>
 				<div id="result" class="text-danger mb-1"></div>
 			</div>
-
-						
+					
 			<button type="submit" class="btn btn-primary" asp-controller="Register" asp-action="AddRegister">Register</button>
+			<p>
+				<a href="Login" >Login</a>
+			</p>
+
 		</form>
 		@if (TempData["success"] != null)
 		{
