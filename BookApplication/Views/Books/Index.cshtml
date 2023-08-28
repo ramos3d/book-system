@@ -2,76 +2,86 @@
 
 <div class="content">
 	<div class="row">
-        <h1>Books available</h1>
+		<h1>Books available</h1>
 		<div class="col-md-12">
-            @if (TempData["success"] != null)
-            {
-                <div class="alert alert-success">
-                    @TempData["success"]
-                </div>
-            }
-            @if (TempData["error"] != null)
-            {
-                <div class="alert alert-danger">
-                    @TempData["error"]
-                </div>
-            }
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Title</th>
-                        <th scope="col">Author</th>
-                        <th scope="col">Published</th>
-                        <th scope="col"></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var book in Model)
-                    {
-                        <tr>
-                            <th>@book.Id</th>
-                            <td>@book.Title</td>
-                            <td>@book.Author</td>
-                            <td>@book.YearPublished</td>
-                            <td>
-                                <form method="post" asp-action="Delete" asp-controller="Books" id="deleteForm">
-                                <a href="Books/Favorite/@book.Id" class="mr-2" title="Favorite">
-                                    <span class="material-symbols-rounded text-danger">
-                                        favorite
-                                    </span>
-                                 </a>
+			@if (TempData["success"] != null)
+			{
+				<div class="alert alert-success">
+					@TempData["success"]
+				</div>
+			}
+			@if (TempData["error"] != null)
+			{
+				<div class="alert alert-danger">
+					@TempData["error"]
+				</div>
+			}
+			<table class="table table-striped table-hover">
+				<thead>
+					<tr>
+						<th scope="col">#</th>
+						<th scope="col">Title</th>
+						<th scope="col">Author</th>
+						<th scope="col">Published</th>
+						<th scope="col"></th>
+						<th scope="col"></th>
+						<th scope="col"></th>
+					</tr>
+				</thead>
+				<tbody>
+					
+					@foreach (var book in Model)
+					{
+						<tr>
+							<th>@book.Id</th>
+							<td>@book.Title</td>
+							<td>@book.Author</td>
+							<td>@book.YearPublished</td>
+							<td>
+								<form method="post" asp-action="AddFavoriteBook" asp-controller="UserHistory">
+									@Html.AntiForgeryToken()
+									<input type="hidden" name="bookId" value="@book.Id" />
+									<button type="submit" title="Favorite" id="btn-favorite">
+										<span class="material-symbols-rounded text-danger">
+											favorite
+										</span>
+									</button>
+								</form>
+							</td>
+							<td>
+								<form method="post" asp-action="AddOwnedBook" asp-controller="UserHistory">
+									@Html.AntiForgeryToken()
+									<input type="hidden" name="bookId" value="@book.Id" />
+									<button type="submit" title="Add to Owned" id="btn-owned">
+										<span class="material-symbols-rounded text-success">
+											add_shopping_cart
+										</span>
+									</button>
+								</form>
+							</td>
+							<td>
+								<form method="post" asp-action="Delete" asp-controller="Books" id="deleteForm">
+									<a href="Books/View/@book.Id" class="mr-2" title="View">
+										<span class="material-symbols-rounded">
+											visibility
+										</span>
+									</a>
 
-                                <a href="Books/View/@book.Id" class="mr-2" title="View">
-                                    <span class="material-symbols-rounded">
-                                        visibility
-                                    </span>
-                                </a>
-                             
-                                    @Html.AntiForgeryToken()
-                                    <input type="hidden" name="id" value="@book.Id" />
-                                    <a href="#" class="mr-2" title="Delete" onclick="confirmDelete('@book.Id')">
-                                        <span class="material-symbols-rounded">
-                                            delete
-                                        </span>
-                                    </a>
-                                   
-                                </form>
-                            </td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
+									@Html.AntiForgeryToken()
+									<input type="hidden" name="id" value="@book.Id" />
+									<a href="#" class="mr-2" title="Delete" onclick="confirmDelete('@book.Id')">
+										<span class="material-symbols-rounded">
+											delete
+										</span>
+									</a>
+								</form>
+							</td>
+						</tr>
+					}
+				</tbody>
+			</table>
 		</div>
 
 	</div>
 </div>
 
-<style>
-    .material-symbols-rounded {
-        font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48
-    }
-    a {
-        text-decoration: none !important;
-    }
-</style>

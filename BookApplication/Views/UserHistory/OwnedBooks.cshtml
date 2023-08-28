@@ -1,0 +1,33 @@
+﻿@model List<BookApplication.Models.Domain.Book>
+
+<h2>Owned Books</h2>
+
+@if (Model.Count == 0)
+{
+    <p>You haven't added any books to your "To Buy" list yet.</p>
+    <p><a asp-controller="Books" asp-action="Index">Start Now</a></p>
+}
+else
+{
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Title</th>
+                <th scope="col">Author</th>
+                <th scope="col">Published</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var book in Model)
+            {
+                <tr>
+                    <th>@book.Id</th>
+                    <td>@book.Title</td>
+                    <td>@book.Author</td>
+                    <td>@book.YearPublished</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

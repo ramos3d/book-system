@@ -13,7 +13,7 @@ namespace BookApplication.Controllers
         {
             _logger = logger;
         }
-        
+
         [Authorize]
         public IActionResult Index()
         {

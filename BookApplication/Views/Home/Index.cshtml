@@ -1,9 +1,10 @@
-﻿@{
+﻿@model BookApplication.Models.UserHistoryViewModel
+
+@{
     ViewData["Title"] = "Welcome";
 }
 
 <div class="text-center">
-
     @if (User.Identity.IsAuthenticated)
     {
         <h1>Hello, @User.Identity.Name!</h1>
@@ -12,5 +13,4 @@
     {
         <h1>Welcome to our website!</h1>
     }
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>

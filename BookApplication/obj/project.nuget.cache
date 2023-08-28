@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "vd/wstfx74loyiNfErBzMP1CWFKPq1aiUvW3z1g/+dBl2XiEsNTBlmNRmL4GcbQ5tbkXdXLbDJLzUImBMROg+g==",
+  "dgSpecHash": "vIkAvyrFKnwYFqgDgxD12a6lN1cSKD881si7K/Ims172YkQNVPBYRxqoXkxgE0pJb1IzTRW9Aub/SU3uMT8aSQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\marce\\Documents\\Projects\\book-system\\BookApplication\\BookApplication.csproj",
   "expectedPackageFiles": [
@@ -42,6 +42,7 @@
     "C:\\Users\\marce\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\marce\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
     "C:\\Users\\marce\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\marce\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\marce\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\marce\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\marce\\.nuget\\packages\\system.configuration.configurationmanager\\5.0.0\\system.configuration.configurationmanager.5.0.0.nupkg.sha512",

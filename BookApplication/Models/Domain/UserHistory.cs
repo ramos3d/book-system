@@ -5,11 +5,11 @@ using System.ComponentModel.DataAnnotations;
 
 namespace BookApplication.Models.Domain
 {
-    public class Users
+    public class UserHistory
     {
 		public Guid Id { get; set; }
-        public string? Name { get; set; }
-        public string? Email { get; set; }
-        public string Password { get; set; }
+        public Guid Users_Id { get; set; }
+        public string To_Buy { get; set; }
+        public string Owned_books { get; set; }
     }
 }

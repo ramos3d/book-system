@@ -38,9 +38,9 @@ namespace BookApplication.Controllers
 				TempData["success"] = "User registered successfully";
 				return RedirectToAction("Index", "Login");
 			}
-			catch (Exception ex)
+			catch (Exception)
 			{
-				TempData["error"] = "An error occurred while registering the user." + ex;
+				TempData["error"] = "An error occurred while registering the user.";
 				return RedirectToAction("Register", "Login");
 			}
 		}

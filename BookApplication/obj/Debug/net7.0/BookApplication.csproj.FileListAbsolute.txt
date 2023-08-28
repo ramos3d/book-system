@@ -74,3 +74,4 @@ C:\Users\marce\Documents\Projects\book-system\BookApplication\obj\Debug\net7.0\B
 C:\Users\marce\Documents\Projects\book-system\BookApplication\obj\Debug\net7.0\BookApplication.genruntimeconfig.cache
 C:\Users\marce\Documents\Projects\book-system\BookApplication\obj\Debug\net7.0\ref\BookApplication.dll
 C:\Users\marce\Documents\Projects\book-system\BookApplication\obj\Debug\net7.0\scopedcss\Views\Shared\_LayoutLogin.cshtml.rz.scp.css
+C:\Users\marce\Documents\Projects\book-system\BookApplication\bin\Debug\net7.0\Newtonsoft.Json.dll
