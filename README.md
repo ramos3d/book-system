@@ -1,5 +1,5 @@
+__Note:__ _This was a result of my studies developing web applications using ASP.NET for the first time._
 # Book Database Application
-
 This project is a book database application that allows users to manage their book collection. With an intuitive user interface, users can create, update, and delete books, as well as keep track of books they currently own and those they wish to purchase.
 
 ## Features
